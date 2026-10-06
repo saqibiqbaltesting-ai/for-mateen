@@ -105,13 +105,13 @@ body::after{
 /* ---------- layout ---------- */
 .wrap{width:min(1080px,92%);margin:0 auto}
 .wrap.narrow{width:min(680px,92%)}
-.sec{position:relative;z-index:5;padding:clamp(70px,10vw,120px) 0}
+.sec{position:relative;z-index:5;padding:clamp(46px,7vw,84px) 0}
 .sec h2{
   font-family:var(--font-d);font-weight:600;font-size:clamp(1.9rem,4.4vw,3rem);
   line-height:1.2;margin:10px 0 12px;
 }
 .sec h2 em{font-style:italic;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.head{margin-bottom:44px}
+.head{margin-bottom:30px}
 .sub{color:var(--muted);font-size:.98rem}
 .eyebrow{
   font-size:.72rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;
@@ -145,7 +145,7 @@ body::after{
 .mini:hover{border-color:var(--rose);color:var(--rose)}
 
 /* ---------- hero ---------- */
-.hero{position:relative;z-index:5;min-height:100vh;display:flex;align-items:center;text-align:center}
+.hero{position:relative;z-index:5;min-height:100vh;display:flex;align-items:center;text-align:center;padding:110px 0 60px}
 .hero-bg{position:absolute;inset:0;overflow:hidden}
 .hero-bg i{
   position:absolute;border-radius:50%;filter:blur(90px);opacity:.5;
@@ -183,11 +183,11 @@ body::after{
 .stat span{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 
 /* page hero (inner pages) */
-.phero{position:relative;z-index:5;padding:150px 0 40px;text-align:center}
+.phero{position:relative;z-index:5;padding:120px 0 20px;text-align:center}
 .phero h1{font-family:var(--font-d);font-weight:300;font-size:clamp(2.2rem,6vw,3.6rem)}
 .phero h1 em{font-style:italic;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .phero p{color:var(--muted);margin-top:8px}
-.pager{display:flex;justify-content:space-between;gap:14px;width:min(680px,92%);margin:0 auto;padding:30px 0 70px;position:relative;z-index:5}
+.pager{display:flex;justify-content:space-between;gap:14px;width:min(680px,92%);margin:0 auto;padding:8px 0 34px;position:relative;z-index:5}
 .pager a{
   flex:1;text-align:center;background:var(--panel);border:1px solid var(--line);border-radius:18px;
   padding:16px;transition:.3s;
@@ -413,7 +413,7 @@ body::after{
 .vip-card p{font-family:var(--font-d);font-style:italic;font-size:1.08rem;color:#efe2ec;margin-top:4px}
 
 /* ---------- finale ---------- */
-.finale{text-align:center;padding-bottom:130px}
+.finale{text-align:center;padding-bottom:70px}
 .heart-big{width:120px;height:110px;margin:40px auto 8px;position:relative;cursor:pointer}
 .heart-big svg{width:100%;height:100%;fill:var(--rose);filter:drop-shadow(0 0 34px rgba(255,111,165,.55));transition:transform .2s}
 .heart-big:active svg{transform:scale(.9)}
@@ -429,7 +429,7 @@ body::after{
 .hb-count{color:var(--gold);font-size:.85rem;margin-top:10px;min-height:22px}
 
 /* ---------- footer / toast / totop ---------- */
-.foot{position:relative;z-index:5;text-align:center;padding:44px 0 60px;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}
+.foot{position:relative;z-index:5;text-align:center;padding:30px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}
 .foot-sub{margin-top:6px;font-size:.75rem;opacity:.7}
 #toast{
   position:fixed;bottom:26px;left:50%;transform:translateX(-50%) translateY(80px);
