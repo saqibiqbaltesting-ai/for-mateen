@@ -111,11 +111,24 @@
     items.forEach(function (e) { io.observe(e); });
   })();
 
-  /* ============ 7. smooth scroll buttons ============ */
+  /* ============ 7. smooth scroll (buttons + nav links) ============ */
+  function goTo(sel) {
+    var t = q(sel); if (!t) return;
+    var y = t.getBoundingClientRect().top + window.pageYOffset - 92;
+    try { window.scrollTo({ top: y < 0 ? 0 : y, behavior: "smooth" }); }
+    catch (e) { window.scrollTo(0, y < 0 ? 0 : y); }
+  }
   qa("[data-scroll]").forEach(function (b) {
-    b.addEventListener("click", function () {
-      var t = q(b.getAttribute("data-scroll"));
-      if (t) t.scrollIntoView({ behavior: "smooth" });
+    b.addEventListener("click", function () { goTo(b.getAttribute("data-scroll")); });
+  });
+  qa('a[href^="#"]').forEach(function (a) {
+    a.addEventListener("click", function (ev) {
+      var h = a.getAttribute("href");
+      if (!h || h === "#") return;
+      if (!q(h)) return;
+      ev.preventDefault();
+      goTo(h);
+      if (history.replaceState) history.replaceState(null, "", h);
     });
   });
 
@@ -130,7 +143,7 @@
     var n = (parseInt(store("fm_visits"), 10) || 0) + 1;
     store("fm_visits", String(n));
     var out = q("#visit-count");
-    if (out) out.textContent = n + (n === 1 ? " martaba" : " martaba");
+    if (out) out.textContent = n + " " + (n === 1 ? "martaba" : "martabe");
   })();
 
   /* ============ 10. days-of-dosti counter ============ */
