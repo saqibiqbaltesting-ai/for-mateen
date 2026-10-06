@@ -390,7 +390,7 @@
       ["Hamesha", "Wada", "Dosti ka wada: koi khatam nahi hota."]
     ];
     items.forEach(function (it) {
-      t.appendChild(el("div", "tl-item reveal", '<span class="when">' + it[0] + '</span><h4>' + it[1] + '</h4><p>' + it[2] + '</p>'));
+      t.appendChild(el("div", "tl-item", '<span class="when">' + it[0] + '</span><h4>' + it[1] + '</h4><p>' + it[2] + '</p>'));
     });
   })();
 
