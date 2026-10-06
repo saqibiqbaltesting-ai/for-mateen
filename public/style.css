@@ -105,13 +105,13 @@ body::after{
 /* ---------- layout ---------- */
 .wrap{width:min(1080px,92%);margin:0 auto}
 .wrap.narrow{width:min(680px,92%)}
-.sec{position:relative;z-index:5;padding:clamp(46px,7vw,84px) 0}
+.sec{position:relative;z-index:5;padding:clamp(34px,5vw,60px) 0}
 .sec h2{
   font-family:var(--font-d);font-weight:600;font-size:clamp(1.9rem,4.4vw,3rem);
   line-height:1.2;margin:10px 0 12px;
 }
 .sec h2 em{font-style:italic;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.head{margin-bottom:30px}
+.head{margin-bottom:22px}
 .sub{color:var(--muted);font-size:.98rem}
 .eyebrow{
   font-size:.72rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;
@@ -119,7 +119,7 @@ body::after{
 }
 .panel{
   background:var(--panel);border:1px solid var(--line);border-radius:var(--r-lg);
-  padding:clamp(22px,4vw,36px);box-shadow:var(--shadow);backdrop-filter:blur(8px);
+  padding:clamp(18px,3vw,28px);box-shadow:var(--shadow);backdrop-filter:blur(8px);
 }
 .center{text-align:center}
 .note{color:var(--muted);font-size:.85rem;margin-top:16px}
@@ -174,7 +174,7 @@ body::after{
 }
 .scroll-cue i{display:block;width:1px;height:44px;margin:0 auto 8px;background:linear-gradient(var(--rose),transparent);animation:cue 1.6s ease infinite}
 @keyframes cue{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1)}100%{transform:scaleY(0);transform-origin:bottom}}
-.hero-stats{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:44px}
+.hero-stats{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:30px}
 .stat{
   background:var(--panel);border:1px solid var(--line);border-radius:18px;
   padding:14px 26px;min-width:130px;
@@ -183,11 +183,11 @@ body::after{
 .stat span{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 
 /* page hero (inner pages) */
-.phero{position:relative;z-index:5;padding:120px 0 20px;text-align:center}
+.phero{position:relative;z-index:5;padding:110px 0 10px;text-align:center}
 .phero h1{font-family:var(--font-d);font-weight:300;font-size:clamp(2.2rem,6vw,3.6rem)}
 .phero h1 em{font-style:italic;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .phero p{color:var(--muted);margin-top:8px}
-.pager{display:flex;justify-content:space-between;gap:14px;width:min(680px,92%);margin:0 auto;padding:8px 0 34px;position:relative;z-index:5}
+.pager{display:flex;justify-content:space-between;gap:14px;width:min(680px,92%);margin:0 auto;padding:4px 0 26px;position:relative;z-index:5}
 .pager a{
   flex:1;text-align:center;background:var(--panel);border:1px solid var(--line);border-radius:18px;
   padding:16px;transition:.3s;

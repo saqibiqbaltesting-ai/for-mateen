@@ -529,7 +529,7 @@
   (function shayari() {
     var v = q("#verse"); if (!v) return;
     var V = [
-      "Dosti wo nahi jo saath kheli,\ndosti wo hy jo saath khadi rahi.",
+      "Dosti wo nahi jo saath kheli,\ndosti wo hy jo saath khada rahe.",
       "Chand ko dekha to tera chehra yaad aya,\nphir chand se kehne laga: tu adhoora hy bhai.",
       "Log paisa jama karte hain,\nmain log \u2014 aur logon mein tum.",
       "Dosti ka pehla paisa tera,\naakhri bhi tera; beech ke sab is site ke.",
