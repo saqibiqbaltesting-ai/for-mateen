@@ -534,7 +534,6 @@
       "Log paisa jama karte hain,\nmain log \u2014 aur logon mein tum.",
       "Dosti ka pehla paisa tera,\naakhri bhi tera; beech ke sab is site ke.",
       "Galiyon mein teri yaad na bhejo,\nyahan se bhi tera hi naam nikalta hy.",
-      "Jo toot gaya wo rishta nahi,\njo tute na \u2014 wo humara rishta hy.",
       "Teri har ada meri dua mein,\ntera har din meri duaa mein.",
       "Naa jafa ki, na wafa ki,\ndosti ki baat hi aur thi.",
       "Ye website bhi teri chamakti dosti ka ek shesha hy.",
@@ -579,7 +578,7 @@
   (function vault() {
     var btn = q("#code-btn"), inp = q("#code-in"), out = q("#code-out"), secret = q("#vault-secret");
     if (!btn || !inp) return;
-    var CODES = { "1234": 0, "2019": 1, "9999": 2 };
+    var CODES = { "1234": 0, "2019": 1, "9999": 2, "MATEEN": 1 };
     var SECRETS = [
       "Ye site sirf ek tester nahi \u2014 ye wada hy. Har jagah jo sach likha hy, wo sach hy.",
       "Jo dafa maine tumhara dil dukhaya, us raat maine wada kiya tha: phir kabhi nahi. Ye site usi wade ki gawah hy.",
