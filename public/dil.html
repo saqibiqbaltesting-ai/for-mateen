@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Dil — Mateen aur Saqib</title>
+<meta name="description" content="Shayari, secret vault, wade, aur aakhri baat. — Saqib" />
+<meta name="theme-color" content="#07060d" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600;700&family=Great+Vibes&family=Noto+Nastaliq+Urdu:wght@400;600&display=swap" rel="stylesheet" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>%F0%9F%92%9B</text></svg>" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="dil">
+
+<div id="loader">
+  <div class="ld-inner">
+    <div class="ld-heart"><svg viewBox="0 0 32 29" aria-hidden="true"><path d="M16 28S0 17.6 0 8.9C0 3.9 3.9 0 8.8 0 12 0 14.7 1.7 16 4.2 17.3 1.7 20 0 23.2 0 28.1 0 32 3.9 32 8.9 32 17.6 16 28 16 28z"/></svg></div>
+    <p class="ld-text">Aakhri page, aakhri baat…</p>
+    <div class="ld-bar"><i></i></div>
+  </div>
+</div>
+
+<canvas id="petals" aria-hidden="true"></canvas>
+<div id="cursor-glow" aria-hidden="true"></div>
+<div id="progress" aria-hidden="true"><i></i></div>
+<div class="float-tools">
+  <button class="tool-btn snd-toggle" type="button" aria-label="Awaz on/off">♪</button>
+  <button class="tool-btn theme-toggle" type="button" aria-label="Rang badlo">◑</button>
+</div>
+
+<nav id="nav" aria-label="Pages">
+  <a class="nav-brand" href="index.html"><span>♡</span> Mateen</a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="dosti.html">Dosti</a>
+    <a href="khel.html">Khel</a>
+    <a href="#shayari">Shayari</a>
+    <a href="#vault">Vault</a>
+  </div>
+  <button id="menu-btn" type="button" aria-label="Menu">☰</button>
+</nav>
+
+<header class="phero">
+  <p class="eyebrow reveal">Page 4 · dil</p>
+  <h1 class="reveal">Aakhri page, <em>poora dil</em></h1>
+  <p class="reveal">Yahan tak aaya? Matlab chitthi parh li. Ab yahan ruk jao thori der.</p>
+</header>
+
+<main>
+
+<section id="shayari" class="sec">
+  <div class="wrap narrow">
+    <div class="head reveal">
+      <p class="eyebrow">Dosti wali shayari</p>
+      <h2>Har lafz <em>tumhare</em> liye</h2>
+      <p class="sub">Ye sirf tumhare liye hai.</p>
+    </div>
+    <div class="verse-card reveal">
+      <p class="verse" id="verse">…</p>
+      <div class="verse-actions">
+        <button class="mini" id="next-verse" type="button">Agli shayari</button>
+        <button class="mini" id="copy-verse" type="button">Copy</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="vault" class="sec">
+  <div class="wrap narrow">
+    <div class="head reveal">
+      <p class="eyebrow">Sirf tumhare liye</p>
+      <h2>Secret <em>vault</em></h2>
+      <p class="sub">Sahi code daalo, chhupi baat khulegi.</p>
+    </div>
+    <div class="panel reveal center">
+      <div class="code-row">
+        <input id="code-in" type="text" inputmode="numeric" placeholder="4 digit code" maxlength="4" aria-label="Secret code" />
+        <button class="btn primary" id="code-btn" type="button">Kholo</button>
+      </div>
+      <div id="code-out" class="code-out" aria-live="polite"></div>
+      <div id="vault-secret" class="vault-secret"><p></p></div>
+      <p class="note">Hint: dosti ke saal (2019), ya asaan code 1234, ya seedha 9999.</p>
+    </div>
+  </div>
+</section>
+
+<section id="together" class="sec">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow">Aane wale din</p>
+      <h2>Ye sab hum <em>saath</em> karenge</h2>
+      <p class="sub">Tap karke tick karo — bucket list hai ye.</p>
+    </div>
+    <ul class="todo-list" id="todo-list"></ul>
+    <p class="todo-count" id="todo-count"></p>
+  </div>
+</section>
+
+<section id="vip" class="sec">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow">★ vip zone ★</p>
+      <h2>Tumhare liye <em>words</em></h2>
+      <p class="sub">Ye sirf tumhare liye likhe hai.</p>
+    </div>
+    <div class="vip-marquee" aria-hidden="true">
+      <div class="vip-track" id="vip-track"></div>
+    </div>
+    <div class="vip-grid" id="vip-grid"></div>
+  </div>
+</section>
+
+<section id="finale" class="sec finale">
+  <div class="wrap narrow center">
+    <p class="eyebrow reveal">Aakhri baat</p>
+    <h2 class="reveal">Tu sirf mera dost nahi, tu mera <em>bhai</em> hai.</h2>
+    <div class="heart-big" id="heart-big" role="button" tabindex="0" aria-label="Dil ko tap karo">
+      <svg viewBox="0 0 32 29"><path d="M16 28S0 17.6 0 8.9C0 3.9 3.9 0 8.8 0 12 0 14.7 1.7 16 4.2 17.3 1.7 20 0 23.2 0 28.1 0 32 3.9 32 8.9 32 17.6 16 28 16 28z"/></svg>
+      <span class="hb-ring"></span>
+    </div>
+    <p class="hb-hint">dil ko tap karo</p>
+    <p class="hb-count"></p>
+    <p class="final-line" id="final-line">I Love You, Jan</p>
+    <p class="final-sub">Tumhara Saqib, hamesha tumhara.</p>
+    <div class="final-cta">
+      <button class="btn primary" id="confetti-btn" type="button">Confetti chalao</button>
+      <a class="btn ghost" href="index.html">Wapas shuru se</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div class="pager">
+  <a href="khel.html"><small>Pichla</small><b>← Khel</b></a>
+  <a href="index.html"><small>Wapas</small><b>Home ↺</b></a>
+</div>
+
+<footer class="foot">
+  <p>Made with dil · <span data-name>Mateen</span> ke liye · <span class="yr">2026</span></p>
+  <p class="foot-sub">Saqib ne banai, raat bhar jag ke.</p>
+</footer>
+
+<canvas id="confetti-canvas" aria-hidden="true"></canvas>
+<div id="toast" role="status" aria-live="polite"></div>
+<button id="to-top" type="button" aria-label="Upar jao">↑</button>
+
+<script src="app.js"></script>
+</body>
+</html>

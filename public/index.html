@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Mateen — Ye Sab Tumhare Liye</title>
+<meta name="description" content="Ek site, poore dil se. Mateen ke liye. — Saqib" />
+<meta name="theme-color" content="#07060d" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600;700&family=Great+Vibes&family=Noto+Nastaliq+Urdu:wght@400;600&display=swap" rel="stylesheet" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>%F0%9F%92%9B</text></svg>" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="home">
+
+<div id="loader">
+  <div class="ld-inner">
+    <div class="ld-heart"><svg viewBox="0 0 32 29" aria-hidden="true"><path d="M16 28S0 17.6 0 8.9C0 3.9 3.9 0 8.8 0 12 0 14.7 1.7 16 4.2 17.3 1.7 20 0 23.2 0 28.1 0 32 3.9 32 8.9 32 17.6 16 28 16 28z"/></svg></div>
+    <p class="ld-text">Ek site, poore dil se…</p>
+    <div class="ld-bar"><i></i></div>
+  </div>
+</div>
+
+<canvas id="petals" aria-hidden="true"></canvas>
+<div id="cursor-glow" aria-hidden="true"></div>
+<div id="progress" aria-hidden="true"><i></i></div>
+<div class="float-tools">
+  <button class="tool-btn snd-toggle" type="button" aria-label="Awaz on/off">♪</button>
+  <button class="tool-btn theme-toggle" type="button" aria-label="Rang badlo">◑</button>
+</div>
+
+<nav id="nav" aria-label="Pages">
+  <a class="nav-brand" href="index.html"><span>♡</span> Mateen</a>
+  <div class="nav-links">
+    <a href="#letter">Chitthi</a>
+    <a href="#truths">Sach</a>
+    <a href="dosti.html">Dosti</a>
+    <a href="khel.html">Khel</a>
+    <a href="dil.html">Dil</a>
+  </div>
+  <button id="menu-btn" type="button" aria-label="Menu">☰</button>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header id="top" class="hero">
+  <div class="hero-bg" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="hero-inner">
+    <p class="eyebrow reveal">Ek chitthi · ek dosti · ek bhai</p>
+    <h1 class="reveal">
+      <span class="soft">Ye sab sirf</span>
+      <span class="name" id="hero-name">Mateen</span>
+      <span class="soft small">ke liye — Saqib ki taraf se</span>
+    </h1>
+    <div class="rule"></div>
+    <p class="lede reveal">Bhai, maine ye poori website tumhare liye banai hai. Har page ek yaad hai, ek baat hai, ek promise hai. Dheere dheere parhna.</p>
+    <div class="hero-cta reveal">
+      <button class="btn primary" data-scroll="#letter" type="button">Chitthi kholo <span>→</span></button>
+      <a class="btn ghost" href="dosti.html">Dosti wala page</a>
+    </div>
+    <div class="hero-stats reveal">
+      <div class="stat"><b id="days-count">0</b><span>din ki dosti</span></div>
+      <div class="stat"><b>4</b><span>pages dil se</span></div>
+      <div class="stat"><b id="visit-count">1 martaba</b><span>tumhari visit</span></div>
+    </div>
+    <div class="scroll-cue"><i></i><span>scroll karo</span></div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ LETTER ============ -->
+<section id="letter" class="sec">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow">01 · Chitthi</p>
+      <h2>Ye <em>chitthi</em> tumhare naam</h2>
+      <p class="sub">Poori parhna. Beech mein mat chhodna.</p>
+    </div>
+    <div class="letter-wrap">
+      <article class="letter reveal">
+        <span class="stamp">Dil Se</span>
+        <p class="salutation">Jan <span data-name>Mateen</span>,</p>
+        <p>Main tumse naraz nahi hona chahta tha. Main sirf ye chahta hon ke tum meri baat sun lo — <span class="hl">dil se</span>.</p>
+        <p>Main jaanta hon ke maine tumhara dil dukhaya, aur ye baat mujhe andar tak gala rahi hai. Us ka koi bahana nahi. Main maanta hon — <span class="gold">poora, bina kisi uf-aur-but ke</span>.</p>
+        <blockquote class="pull">Tum sirf ek dost nahi ho. Tum wo shakhs ho jiske baghair sab adhoora lagta hai.</blockquote>
+        <p>Meri galti thi. Aur main sirf sorry bolne nahi aaya — main <span class="hl">wapas</span> aaya hon. Phir se wahi, pehle jaise. Ye mera wada hai.</p>
+        <div class="sign">
+          <span class="who">Saqib</span>
+          <span class="role">Tumhara dost, hamesha</span>
+        </div>
+        <div class="letter-actions">
+          <button class="mini" id="copy-letter" type="button">Chitthi copy karo</button>
+          <button class="mini" id="share-letter" type="button">Share karo</button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUTHS ============ -->
+<section id="truths" class="sec">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow">02 · Teen baatein</p>
+      <h2>Teen baatein jo main <em>yaad rakhna</em> chahta hon</h2>
+      <p class="sub">Ye sirf alfaz nahi. Ye sach hai.</p>
+    </div>
+    <div class="truth-grid">
+      <article class="truth reveal">
+        <span class="truth-n">01</span>
+        <h3>Meri galti thi</h3>
+        <p>Maine tumhara dil dukhaya aur us ka koi bahana nahi. Main maanta hon — poora, bina kisi uf-aur-but ke.</p>
+      </article>
+      <article class="truth reveal">
+        <span class="truth-n">02</span>
+        <h3>Tum sab se alag ho</h3>
+        <p>Tum meri zindagi ke un logon mein se ho jinke baghair sab adhoora lagta hai. Ye kabhi badla nahi.</p>
+      </article>
+      <article class="truth reveal">
+        <span class="truth-n">03</span>
+        <h3>Meri muhabbat</h3>
+        <p>Main tumse muhabbat karta hon — chupke se nahi, poore dil se, aur hamesha ke liye. Ye mera wada hai.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ENVELOPE NOTE ============ -->
+<section id="note" class="sec">
+  <div class="wrap narrow">
+    <div class="head reveal center">
+      <p class="eyebrow">03 · Ek chhota note</p>
+      <h2>Ek <em>lifafa</em></h2>
+      <p class="sub">Tap karke kholo.</p>
+    </div>
+    <div class="envelope reveal" id="envelope" role="button" tabindex="0" aria-label="Note kholo">
+      <div class="env-back"></div>
+      <div class="env-paper">
+        <p>Bhai, agar tum ye parh rahe ho to samajh lo — main sirf sorry nahi bol raha, main tumhe wapas chahiye. Har jaga, har waqt, hamesha.</p>
+        <p class="env-sign">— Saqib</p>
+      </div>
+      <div class="env-flap"></div>
+      <div class="env-front"></div>
+      <span class="env-hint">tap karo</span>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div class="pager">
+  <a href="dosti.html"><small>Agla page</small><b>Dosti →</b></a>
+</div>
+
+<footer class="foot">
+  <p>Made with dil · <span data-name>Mateen</span> ke liye · <span class="yr">2026</span></p>
+  <p class="foot-sub">Saqib ne banai, raat bhar jag ke.</p>
+</footer>
+
+<canvas id="confetti-canvas" aria-hidden="true"></canvas>
+<div id="toast" role="status" aria-live="polite"></div>
+<button id="to-top" type="button" aria-label="Upar jao">↑</button>
+
+<script src="app.js"></script>
+</body>
+</html>

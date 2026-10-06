@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Khel — Mateen aur Saqib</title>
+<meta name="description" content="Quiz, roast machine, mood, rating, badges. — Saqib" />
+<meta name="theme-color" content="#07060d" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>%F0%9F%92%9B</text></svg>" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="khel">
+
+<div id="loader">
+  <div class="ld-inner">
+    <div class="ld-heart"><svg viewBox="0 0 32 29" aria-hidden="true"><path d="M16 28S0 17.6 0 8.9C0 3.9 3.9 0 8.8 0 12 0 14.7 1.7 16 4.2 17.3 1.7 20 0 23.2 0 28.1 0 32 3.9 32 8.9 32 17.6 16 28 16 28z"/></svg></div>
+    <p class="ld-text">Khelo, jitna dil chahe…</p>
+    <div class="ld-bar"><i></i></div>
+  </div>
+</div>
+
+<canvas id="petals" aria-hidden="true"></canvas>
+<div id="cursor-glow" aria-hidden="true"></div>
+<div id="progress" aria-hidden="true"><i></i></div>
+<div class="float-tools">
+  <button class="tool-btn snd-toggle" type="button" aria-label="Awaz on/off">♪</button>
+  <button class="tool-btn theme-toggle" type="button" aria-label="Rang badlo">◑</button>
+</div>
+
+<nav id="nav" aria-label="Pages">
+  <a class="nav-brand" href="index.html"><span>♡</span> Mateen</a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="dosti.html">Dosti</a>
+    <a href="#quiz">Quiz</a>
+    <a href="#roast">Roast</a>
+    <a href="dil.html">Dil</a>
+  </div>
+  <button id="menu-btn" type="button" aria-label="Menu">☰</button>
+</nav>
+
+<header class="phero">
+  <p class="eyebrow reveal">Page 3 · khel</p>
+  <h1 class="reveal">Khelo, hanso, <em>yaad</em> rakho</h1>
+  <p class="reveal">Sab kuch tumhare liye hai — jeetna harana, dono chalta hai.</p>
+</header>
+
+<main>
+
+<section id="quiz" class="sec">
+  <div class="wrap narrow">
+    <div class="head reveal">
+      <p class="eyebrow">Chhota sa test</p>
+      <h2>Dosti ka <em>quiz</em></h2>
+      <p class="sub">Sach wala jawab de, main jaan gaya.</p>
+    </div>
+    <div class="panel reveal">
+      <div id="quiz-box"></div>
+    </div>
+  </div>
+</section>
+
+<section id="roast" class="sec">
+  <div class="wrap narrow">
+    <div class="head reveal">
+      <p class="eyebrow">Ek line sun le bhai</p>
+      <h2>Dost <em>roast</em> machine</h2>
+      <p class="sub">Sach bolna, koi dekh nahi raha.</p>
+    </div>
+    <div class="panel reveal center">
+      <p class="roast-out" id="roast-out">Button dabao, gaali nahi milegi — sirf sach.</p>
+      <button class="btn primary" id="roast-btn" type="button">Roast karo</button>
+    </div>
+  </div>
+</section>
+
+<section id="mood" class="sec">
+  <div class="wrap narrow">
+    <div class="head reveal">
+      <p class="eyebrow">Aaj ka haal</p>
+      <h2>Aaj mood <em>kaisa</em> hai?</h2>
+      <p class="sub">Tap karo, main jawab de dunga.</p>
+    </div>
+    <div class="mood-row reveal" id="mood-row"></div>
+    <p class="mood-out center" id="mood-out">Abhi kuch select nahi kiya.</p>
+  </div>
+</section>
+
+<section id="rating" class="sec">
+  <div class="wrap narrow center">
+    <div class="head reveal">
+      <p class="eyebrow">Bilkul imaandaari se</p>
+      <h2>Is site ko <em>rating</em> do</h2>
+      <p class="sub">Kitne sitare milte hai humari dosti ko?</p>
+    </div>
+    <div class="stars reveal" id="stars" role="radiogroup" aria-label="Rating"></div>
+    <p class="mood-out" id="star-out">Abhi koi star nahi diya.</p>
+  </div>
+</section>
+
+<section id="compliment" class="sec">
+  <div class="wrap narrow center">
+    <div class="head reveal">
+      <p class="eyebrow">Sun lo ek baar</p>
+      <h2>Tumhare liye ek <em>taareef</em></h2>
+      <p class="sub">Har dafa nayi wali.</p>
+    </div>
+    <div class="panel reveal">
+      <p class="compliment-out" id="compliment-out">Dabao aur dekho.</p>
+      <button class="btn primary" id="compliment-btn" type="button">Taareef suno</button>
+    </div>
+  </div>
+</section>
+
+<section id="missy" class="sec">
+  <div class="wrap narrow center">
+    <div class="head reveal">
+      <p class="eyebrow">Aur sach ye</p>
+      <h2>Tumhari <em>yaad</em></h2>
+      <p class="sub">Dabao, jawab milega.</p>
+    </div>
+    <div class="panel reveal">
+      <p class="missy-out" id="missy-out">I miss you, bhai.</p>
+      <button class="btn primary" id="missy-btn" type="button">Miss you bhejo</button>
+    </div>
+  </div>
+</section>
+
+<section id="chai" class="sec">
+  <div class="wrap narrow center">
+    <div class="head reveal">
+      <p class="eyebrow">Sab se zaroori planning</p>
+      <h2>Agli <em>chai</em> kab?</h2>
+      <p class="sub">Website decide karne ka dawa nahi rakhti, magar try to karo.</p>
+    </div>
+    <div class="panel reveal">
+      <p class="compliment-out" id="chai-out">Button dabao, plan tayyar hai.</p>
+      <button class="btn primary" id="chai-btn" type="button">Plan batao</button>
+    </div>
+  </div>
+</section>
+
+<section id="badges" class="sec">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow">Tumhare naam ke</p>
+      <h2>Tumhare <em>badges</em></h2>
+      <p class="sub">Ye sab tumne deserve kiye hai.</p>
+    </div>
+    <div class="badge-grid" id="badge-grid"></div>
+  </div>
+</section>
+
+</main>
+
+<div class="pager">
+  <a href="dosti.html"><small>Pichla</small><b>← Dosti</b></a>
+  <a href="dil.html"><small>Aakhri page</small><b>Dil →</b></a>
+</div>
+
+<footer class="foot">
+  <p>Made with dil · <span data-name>Mateen</span> ke liye · <span class="yr">2026</span></p>
+  <p class="foot-sub">Saqib ne banai, raat bhar jag ke.</p>
+</footer>
+
+<canvas id="confetti-canvas" aria-hidden="true"></canvas>
+<div id="toast" role="status" aria-live="polite"></div>
+<button id="to-top" type="button" aria-label="Upar jao">↑</button>
+
+<script src="app.js"></script>
+</body>
+</html>
